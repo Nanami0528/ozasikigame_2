@@ -15,7 +15,7 @@
     IBOutlet UIImageView *gu;
     IBOutlet UIImageView *red;
     IBOutlet UIButton *startButton;
-    IBOutlet  UIView * tapView;
+    IBOutlet UIButton *tapButton;
     
     
     int number;

@@ -25,7 +25,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-   
+    UIView *tapView = [[UIView alloc]init];
+    tapView.frame = CGRectMake(0, 0, 108, 97);
+    tapView.backgroundColor = [UIColor redColor];
+    [tapButton addSubview:tapView];
+    
+    
    //タップ認識
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view_Tapped:)];
@@ -45,11 +50,6 @@
     red.hidden = NO;
    
     
-}
-
-- (void)view_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"タップされました．");
 }
 
 
@@ -146,9 +146,13 @@
 
 
 }
--(IBAction)tap{
+
+
+- (void)view_Tapped:(UITapGestureRecognizer *)sender
+{
     
-    
+    NSLog(@"タップされました．");
+
     number=number+1;
  
       if (count%2 == 0) {
