@@ -31,7 +31,7 @@
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view_Tapped:)];
     
     // ビューにジェスチャーを追加（タップしたか確認のビュー）
-    [self.view addGestureRecognizer:tapGesture];
+    [tapView addGestureRecognizer:tapGesture];
     
     
  

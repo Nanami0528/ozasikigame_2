@@ -25,6 +25,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand1.png" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
                                 <rect key="frame" x="109" y="28" width="102" height="183"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-44-Vw8">
+                                <rect key="frame" x="120" y="254" width="86" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-ZC-OFS">
                                 <rect key="frame" x="109" y="243" width="108" height="97"/>
                                 <state key="normal">
@@ -52,6 +56,7 @@
                         <outlet property="par" destination="94k-3f-7GE" id="3Jg-KY-Ubv"/>
                         <outlet property="red" destination="gAQ-d2-mVO" id="8gK-yw-ZJ7"/>
                         <outlet property="startButton" destination="mSi-nI-Tg3" id="NTX-xT-WmE"/>
+                        <outlet property="tapView" destination="1Fc-44-Vw8" id="Qmp-t0-JXX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
