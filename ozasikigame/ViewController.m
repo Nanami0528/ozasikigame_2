@@ -16,7 +16,7 @@
     int doubleTap;
     int guCount;
 
-  
+    int tapCount;
 }
 
 
@@ -48,12 +48,13 @@
     [guButton addGestureRecognizer:gestureRecognizer];
 
 
-    
+    //初期値を設定
     timeCount = 1; //最初に手が出てくるようにするために１
     par.hidden=YES;
     gu.hidden=YES;
     red.hidden = NO;
     doubleTap = 0;
+    number=0;
     
 }
 
@@ -134,13 +135,12 @@
         
         
     }
-    
+    //２秒ごとにダブルタップを初期化
     if (timeCount%2 == 0) {
         doubleTap = 0;
     }
    
-    
-    
+
 }
 
 
@@ -159,8 +159,9 @@
 
 
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
-    
+    tapCount++;
     NSLog(@"タップされました．");
+  
        
  
  
@@ -172,12 +173,19 @@
         number=number+1;
         tapLabel.text =[NSString  stringWithFormat:@"%d",number];
         
+        
+        //間違って２連続タップでアウト
+        NSLog(@"%d",doubleTap);
         if (doubleTap == 2) {
             GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
             [self presentModalViewController:gameover animated:YES ];
         }
-        //FIX: なんだったっけ...
+   
+
+        
 //        if (timeCount%4 == 0) {
+
+        //            guCount += 1;
 //            if (guCount == 1) {
 //                NSLog(@"****ok");
 //            } else {
@@ -185,8 +193,7 @@
 //                [self presentModalViewController:gameover animated:YES ];
 //            }
 //        }
-        
-        
+//        
      }else{
         
         
@@ -215,29 +222,45 @@
 -(IBAction)gubutton{
 
     
+//    guCount += 1;
+//    NSLog( @"グー押した%d", guCount)
+//    
+            if (timeCount%4 == 1) {
+    
+                guCount += 1;
+                if (guCount == 1) {
+                    NSLog( @"グー押した%d", guCount);
+//                    NSLog(@"****ok");
+                } else {
+//                    GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
+//                    [self presentModalViewController:gameover animated:YES ];
+                }
+            }
+    
+    
 }
 
 //長押し関連処理
--(void)longPressedHandler:(UILongPressGestureRecognizer *)gestureRecognizer
-{
-    NSLog(@"%s",__func__);
-    switch (gestureRecognizer.state) {
-        case UIGestureRecognizerStateBegan://長押しを検知開始
-        {
-            NSLog(@"UIGestureRecognizerStateBegan");
-            guCount = 1;
-        }
-        break;
-        case UIGestureRecognizerStateEnded://長押し終了時
-        {
-            NSLog(@"UIGestureRecognizerStateEnded");
-            guCount = 0;
-        }
-        break;
-        default:
-            break;
-    }
-}
+//-(void)longPressedHandler:(UILongPressGestureRecognizer *)gestureRecognizer
+//{
+//    NSLog(@"%s",__func__);
+//    switch (gestureRecognizer.state) {
+//        case UIGestureRecognizerStateBegan://長押しを検知開始
+//        {
+//            NSLog(@"UIGestureRecognizerStateBegan");
+//            guCount = 1;
+//        }
+//        break;
+//        case UIGestureRecognizerStateEnded://長押し終了時
+//        {
+//            NSLog(@"UIGestureRecognizerStateEnded");
+//            guCount = 0;
+//        }
+//        break;
+//        default:
+//            break;
+//    }
+//}
 
 
 
