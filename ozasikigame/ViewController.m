@@ -60,7 +60,7 @@
 
 -(void)time:(NSTimer*)timer{
     timeCount += 1;
-    countLabel.text = [NSString stringWithFormat:@"%d",timeCount];
+    countLabel.text = [NSString stringWithFormat:@"%d",timeCount-1];
 
     
     NSLog(@"time:%d", timeCount-1);
@@ -166,12 +166,11 @@
  
     //
     if (timeCount%2 == 1) {
-       doubleTap += 1;
-       number=number+1;
-       
-        //
+        doubleTap += 1;
+        NSLog(@"%d",doubleTap);
+        
+        number=number+1;
         tapLabel.text =[NSString  stringWithFormat:@"%d",number];
-        NSLog(@"******%d",doubleTap);
         
         if (doubleTap == 2) {
             GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
