@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wd1-5g-KNM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="xYQ-M8-Wne">
+            <objects>
+                <viewController id="Wd1-5g-KNM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUA-NX-2hd"/>
+                        <viewControllerLayoutGuide type="bottom" id="2x7-wa-T12"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vuf-2B-5Y2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watool_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-PU-2Zv">
+                                <rect key="frame" x="-5" y="-5" width="334" height="573"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="お座敷文字.png" translatesAutoresizingMaskIntoConstraints="NO" id="mm2-cN-mTN">
+                                <rect key="frame" x="-13" y="-12" width="346" height="649"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-XF-fM2">
+                                <rect key="frame" x="16" y="241" width="153" height="50"/>
+                                <color key="backgroundColor" red="0.70683195153061229" green="0.009998661303124743" blue="0.029888471644245834" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346938775531" green="0.00083449042624624274" blue="0.0024944982819310804" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="Ee0-LE-tL9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU4-45-ZtN">
+                                <rect key="frame" x="16" y="316" width="153" height="53"/>
+                                <color key="backgroundColor" red="0.55953045280612246" green="0.1383300878722093" blue="0.17073828229069615" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12366470025510201" green="0.030573043463831114" blue="0.037735745026314139" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="舞妓.png" translatesAutoresizingMaskIntoConstraints="NO" id="vJo-bk-Txx">
+                                <rect key="frame" x="135" y="329" width="246" height="219"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMK-iz-Zku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="214"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -16,14 +65,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="赤.png" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-d2-mVO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tatami.png" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-Yb-dbg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="おわん００.png" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-d2-mVO">
                                 <rect key="frame" x="89" y="226" width="154" height="138"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hand.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Te-MAT">
-                                <rect key="frame" x="97" y="-12" width="127" height="230"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand1.png" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
-                                <rect key="frame" x="109" y="28" width="102" height="183"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand001.png" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
+                                <rect key="frame" x="115" y="171" width="102" height="183"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-ZC-OFS">
                                 <rect key="frame" x="109" y="243" width="108" height="97"/>
@@ -35,7 +84,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSi-nI-Tg3">
-                                <rect key="frame" x="141" y="275" width="51" height="39"/>
+                                <rect key="frame" x="115" y="252" width="91" height="77.5"/>
+                                <color key="tintColor" red="0.00037203898212062744" green="0.00045838647959184353" blue="0.00025061165645048151" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,16 +93,45 @@
                                     <action selector="start" destination="vXZ-lx-hvc" eventType="touchUpInside" id="52j-3j-DPT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb0-Is-vBi">
+                                <rect key="frame" x="251" y="275" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7v-hi-ObV">
+                                <rect key="frame" x="16" y="492" width="60" height="56"/>
+                                <color key="backgroundColor" red="0.78039301658163263" green="0.052093282898565151" blue="0.14674552833582793" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0015744579081632404" green="0.00010509919935098658" blue="0.00029606192350104004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="gu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gubutton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FUD-V9-VtM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-A2-afa">
+                                <rect key="frame" x="251" y="211" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand004.png" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Te-MAT">
+                                <rect key="frame" x="59" y="65" width="215" height="193"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="countLabel" destination="HoQ-A2-afa" id="vYg-Hy-uxm"/>
                         <outlet property="gu" destination="z8K-Te-MAT" id="0qj-A0-c6p"/>
+                        <outlet property="guButton" destination="a7v-hi-ObV" id="zxQ-Ub-4r4"/>
                         <outlet property="par" destination="94k-3f-7GE" id="3Jg-KY-Ubv"/>
                         <outlet property="red" destination="gAQ-d2-mVO" id="8gK-yw-ZJ7"/>
                         <outlet property="startButton" destination="mSi-nI-Tg3" id="NTX-xT-WmE"/>
                         <outlet property="tapButton" destination="Rcb-ZC-OFS" id="7vr-7p-jWq"/>
+                        <outlet property="tapLabel" destination="sb0-Is-vBi" id="M4T-HN-Iel"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -71,12 +150,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watool_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="69e-fq-qZt">
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="568"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clear!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-Hc-fE1">
                                 <rect key="frame" x="140" y="212" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-Uf-dzC">
+                                <rect key="frame" x="42" y="491" width="34" height="30"/>
+                                <color key="tintColor" red="0.12366470025510201" green="0.11606951916264054" blue="0.0045278267902224304" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wd1-5g-KNM" kind="modal" id="oeQ-fW-Kp6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -98,12 +190,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watool_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-sc-nOj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="581"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GAMEOVER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sy-Te-DKQ">
                                 <rect key="frame" x="113" y="248" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bO-FP-cto">
+                                <rect key="frame" x="31" y="518" width="34" height="30"/>
+                                <color key="tintColor" red="0.11347426895861196" green="0.068155501444628799" blue="0.12366470025510201" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wd1-5g-KNM" kind="modal" id="wr0-8q-UCh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -115,8 +220,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Hand.jpg" width="237" height="348"/>
-        <image name="hand1.png" width="237" height="332"/>
-        <image name="赤.png" width="225" height="225"/>
+        <image name="hand001.png" width="237" height="332"/>
+        <image name="hand004.png" width="269" height="188"/>
+        <image name="tatami.png" width="320" height="568"/>
+        <image name="watool_06.jpg" width="426" height="300"/>
+        <image name="おわん００.png" width="586" height="473"/>
+        <image name="お座敷文字.png" width="320" height="568"/>
+        <image name="舞妓.png" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oeQ-fW-Kp6"/>
+    </inferredMetricsTieBreakers>
 </document>

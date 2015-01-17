@@ -16,7 +16,10 @@
     IBOutlet UIImageView *red;
     IBOutlet UIButton *startButton;
     IBOutlet UIButton *tapButton;
-    
+    IBOutlet UIButton *guButton;
+    IBOutlet UILabel * countLabel;
+    IBOutlet UILabel * tapLabel;
+
     
     int number;
 }
@@ -25,7 +28,7 @@
 
 -(IBAction)start;
 -(IBAction)tap;
-
+-(IBAction)gubutton;
 
 @end
 

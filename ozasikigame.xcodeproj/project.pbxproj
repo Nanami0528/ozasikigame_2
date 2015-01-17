@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E98EF83C1A6A209F009C1482 /* hand004.png in Resources */ = {isa = PBXBuildFile; fileRef = E98EF83B1A6A209F009C1482 /* hand004.png */; };
 		E9C1AADF1A298E8100B8B0FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1AADE1A298E8100B8B0FF /* main.m */; };
 		E9C1AAE21A298E8100B8B0FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1AAE11A298E8100B8B0FF /* AppDelegate.m */; };
 		E9C1AAE51A298E8100B8B0FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1AAE41A298E8100B8B0FF /* ViewController.m */; };
@@ -14,12 +15,19 @@
 		E9C1AAEA1A298E8100B8B0FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AAE91A298E8100B8B0FF /* Images.xcassets */; };
 		E9C1AAED1A298E8100B8B0FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AAEB1A298E8100B8B0FF /* LaunchScreen.xib */; };
 		E9C1AAF91A298E8100B8B0FF /* ozasikigameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1AAF81A298E8100B8B0FF /* ozasikigameTests.m */; };
-		E9C1AB351A29A79600B8B0FF /* neko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB341A29A79600B8B0FF /* neko.jpg */; };
 		E9C1AB371A29B89800B8B0FF /* Hand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB361A29B89800B8B0FF /* Hand.jpg */; };
 		E9C1AB391A29D2A000B8B0FF /* 赤.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C1AB381A29D2A000B8B0FF /* 赤.png */; };
-		E9C2AD521A32E05800CF80F7 /* hand1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C2AD511A32E05800CF80F7 /* hand1.png */; };
 		E9FC4A001A4A406F00599825 /* GameoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC49FF1A4A406F00599825 /* GameoverViewController.m */; };
 		E9FC4A031A4A4E0E00599825 /* GameclearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC4A021A4A4E0E00599825 /* GameclearViewController.m */; };
+		E9FC4A051A4BDB2200599825 /* tatami.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A041A4BDB2200599825 /* tatami.png */; };
+		E9FC4A071A4BDB3000599825 /* おわん００.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A061A4BDB3000599825 /* おわん００.png */; };
+		E9FC4A171A4BF9F200599825 /* hand000.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A161A4BF9F200599825 /* hand000.png */; };
+		E9FC4A191A4BF9FA00599825 /* hand001.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A181A4BF9FA00599825 /* hand001.png */; };
+		E9FC4B4B1A4BFF7700599825 /* hand005.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B4A1A4BFF7700599825 /* hand005.png */; };
+		E9FC4B4F1A4C037600599825 /* 舞妓.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B4E1A4C037600599825 /* 舞妓.png */; };
+		E9FC4B511A4C04BC00599825 /* watool_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B501A4C04BC00599825 /* watool_06.jpg */; };
+		E9FC4B531A4C052A00599825 /* お座敷文字.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B521A4C052A00599825 /* お座敷文字.png */; };
+		E9FC4B551A4C05F000599825 /* さくら.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B541A4C05F000599825 /* さくら.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E98EF83B1A6A209F009C1482 /* hand004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand004.png; sourceTree = "<group>"; };
 		E9C1AAD91A298E8100B8B0FF /* ozasikigame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ozasikigame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C1AADD1A298E8100B8B0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C1AADE1A298E8100B8B0FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,14 +55,21 @@
 		E9C1AAF21A298E8100B8B0FF /* ozasikigameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ozasikigameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C1AAF71A298E8100B8B0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C1AAF81A298E8100B8B0FF /* ozasikigameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ozasikigameTests.m; sourceTree = "<group>"; };
-		E9C1AB341A29A79600B8B0FF /* neko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neko.jpg; sourceTree = "<group>"; };
 		E9C1AB361A29B89800B8B0FF /* Hand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hand.jpg; sourceTree = "<group>"; };
 		E9C1AB381A29D2A000B8B0FF /* 赤.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赤.png"; sourceTree = "<group>"; };
-		E9C2AD511A32E05800CF80F7 /* hand1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand1.png; sourceTree = "<group>"; };
 		E9FC49FE1A4A406F00599825 /* GameoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameoverViewController.h; sourceTree = "<group>"; };
 		E9FC49FF1A4A406F00599825 /* GameoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameoverViewController.m; sourceTree = "<group>"; };
 		E9FC4A011A4A4E0E00599825 /* GameclearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameclearViewController.h; sourceTree = "<group>"; };
 		E9FC4A021A4A4E0E00599825 /* GameclearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameclearViewController.m; sourceTree = "<group>"; };
+		E9FC4A041A4BDB2200599825 /* tatami.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatami.png; sourceTree = "<group>"; };
+		E9FC4A061A4BDB3000599825 /* おわん００.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "おわん００.png"; sourceTree = "<group>"; };
+		E9FC4A161A4BF9F200599825 /* hand000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand000.png; sourceTree = "<group>"; };
+		E9FC4A181A4BF9FA00599825 /* hand001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand001.png; sourceTree = "<group>"; };
+		E9FC4B4A1A4BFF7700599825 /* hand005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand005.png; sourceTree = "<group>"; };
+		E9FC4B4E1A4C037600599825 /* 舞妓.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "舞妓.png"; sourceTree = "<group>"; };
+		E9FC4B501A4C04BC00599825 /* watool_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watool_06.jpg; sourceTree = "<group>"; };
+		E9FC4B521A4C052A00599825 /* お座敷文字.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "お座敷文字.png"; sourceTree = "<group>"; };
+		E9FC4B541A4C05F000599825 /* さくら.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "さくら.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +93,18 @@
 		E9C1AAD01A298E8100B8B0FF = {
 			isa = PBXGroup;
 			children = (
-				E9C2AD511A32E05800CF80F7 /* hand1.png */,
-				E9C1AB361A29B89800B8B0FF /* Hand.jpg */,
-				E9C1AB341A29A79600B8B0FF /* neko.jpg */,
+				E98EF83B1A6A209F009C1482 /* hand004.png */,
+				E9FC4B541A4C05F000599825 /* さくら.png */,
+				E9FC4B521A4C052A00599825 /* お座敷文字.png */,
+				E9FC4B501A4C04BC00599825 /* watool_06.jpg */,
+				E9FC4B4E1A4C037600599825 /* 舞妓.png */,
+				E9FC4B4A1A4BFF7700599825 /* hand005.png */,
+				E9FC4A181A4BF9FA00599825 /* hand001.png */,
+				E9FC4A161A4BF9F200599825 /* hand000.png */,
+				E9FC4A061A4BDB3000599825 /* おわん００.png */,
 				E9C1AADB1A298E8100B8B0FF /* ozasikigame */,
+				E9FC4A041A4BDB2200599825 /* tatami.png */,
+				E9C1AB361A29B89800B8B0FF /* Hand.jpg */,
 				E9C1AAF51A298E8100B8B0FF /* ozasikigameTests */,
 				E9C1AADA1A298E8100B8B0FF /* Products */,
 			);
@@ -221,12 +245,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FC4B531A4C052A00599825 /* お座敷文字.png in Resources */,
+				E9FC4A071A4BDB3000599825 /* おわん００.png in Resources */,
 				E9C1AB391A29D2A000B8B0FF /* 赤.png in Resources */,
-				E9C1AB351A29A79600B8B0FF /* neko.jpg in Resources */,
+				E9FC4A191A4BF9FA00599825 /* hand001.png in Resources */,
 				E9C1AAE81A298E8100B8B0FF /* Main.storyboard in Resources */,
 				E9C1AB371A29B89800B8B0FF /* Hand.jpg in Resources */,
-				E9C2AD521A32E05800CF80F7 /* hand1.png in Resources */,
+				E9FC4B551A4C05F000599825 /* さくら.png in Resources */,
+				E9FC4A051A4BDB2200599825 /* tatami.png in Resources */,
+				E9FC4B4F1A4C037600599825 /* 舞妓.png in Resources */,
+				E98EF83C1A6A209F009C1482 /* hand004.png in Resources */,
 				E9C1AAED1A298E8100B8B0FF /* LaunchScreen.xib in Resources */,
+				E9FC4B4B1A4BFF7700599825 /* hand005.png in Resources */,
+				E9FC4A171A4BF9F200599825 /* hand000.png in Resources */,
+				E9FC4B511A4C04BC00599825 /* watool_06.jpg in Resources */,
 				E9C1AAEA1A298E8100B8B0FF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
