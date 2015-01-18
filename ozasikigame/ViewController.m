@@ -65,7 +65,7 @@
 
     
     NSLog(@"time:%d", timeCount-1);
-    
+
     if (timeCount%4 == 0) {
         par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
@@ -139,7 +139,18 @@
     if (timeCount%2 == 0) {
         doubleTap = 0;
     }
-   
+    
+    //グーボタンを４秒の時初期化
+    if (timeCount == 4) {
+        guCount = 0;
+    }
+    //時間が６秒になった時　グーボタンが1回押されてないといけない
+    if (timeCount  == 6 && guCount == 0 < guCount >2) {
+       
+        GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
+        [self presentModalViewController:gameover animated:YES ];
+    }
+
 
 }
 
@@ -155,6 +166,32 @@
                                             repeats:YES];
 
 
+}
+
+
+-(IBAction)gubutton{
+    
+    
+    guCount += 1;
+    //    NSLog( @"グー押した%d", guCount)
+    //
+    
+    //    if (timeCount == 5+4*guCount ) {
+    //
+    //
+    //
+    //          NSLog( @"グー押した%d", guCount);
+    ////                       NSLog(@"****ok");
+    //
+    //
+    //    }else {
+    ////                   GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
+    ////                    [self presentModalViewController:gameover animated:YES ];
+    ////        
+    //    
+    //    
+    //    }
+    
 }
 
 
@@ -212,33 +249,14 @@
           [self presentModalViewController:gameclear animated:YES ];
     
       }
-    
+
     
     
 }
 
 
 
--(IBAction)gubutton{
 
-    
-//    guCount += 1;
-//    NSLog( @"グー押した%d", guCount)
-//    
-            if (timeCount%4 == 1) {
-    
-                guCount += 1;
-                if (guCount == 1) {
-                    NSLog( @"グー押した%d", guCount);
-//                    NSLog(@"****ok");
-                } else {
-//                    GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-//                    [self presentModalViewController:gameover animated:YES ];
-                }
-            }
-    
-    
-}
 
 //長押し関連処理
 //-(void)longPressedHandler:(UILongPressGestureRecognizer *)gestureRecognizer

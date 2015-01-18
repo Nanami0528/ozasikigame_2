@@ -91,6 +91,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7v-hi-ObV">
+                                <rect key="frame" x="131" y="336" width="60" height="56"/>
+                                <color key="backgroundColor" red="0.78039301658163263" green="0.052093282898565151" blue="0.14674552833582793" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0015744579081632404" green="0.00010509919935098658" blue="0.00029606192350104004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="gu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gubutton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FUD-V9-VtM"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-A2-afa">
                                 <rect key="frame" x="246" y="121" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,17 +123,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7v-hi-ObV">
-                                <rect key="frame" x="131" y="336" width="60" height="56"/>
-                                <color key="backgroundColor" red="0.78039301658163263" green="0.052093282898565151" blue="0.14674552833582793" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0015744579081632404" green="0.00010509919935098658" blue="0.00029606192350104004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="gu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gubutton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FUD-V9-VtM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
