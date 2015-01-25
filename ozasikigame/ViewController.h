@@ -14,9 +14,13 @@
     IBOutlet UIImageView *par;
     IBOutlet UIImageView *gu;
     IBOutlet UIImageView *red;
+    
+    //ボタン
     IBOutlet UIButton *startButton;
     IBOutlet UIButton *tapButton;
     IBOutlet UIButton *guButton;
+    
+    //ラベル
     IBOutlet UILabel * countLabel;
     IBOutlet UILabel * tapLabel;
 

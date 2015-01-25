@@ -12,10 +12,11 @@
 
 @interface ViewController (){
     NSTimer *timer;
-    int timeCount;
-    int doubleTap;
+    
+    int timeCount;//メインタイマー
+    int doubleTap;//ダブルタップ
     int guCount;
-
+    
     int tapCount;
 }
 
@@ -29,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //タップViewの生成
     UIView *tapView = [[UIView alloc]init];
     tapView.frame = CGRectMake(0, 0, 108, 97);
     tapView.backgroundColor = [UIColor clearColor];
@@ -140,6 +142,8 @@
         doubleTap = 0;
     }
     
+    
+    
     //グーボタンを４秒の時初期化
     if (timeCount == 4) {
         guCount = 0;
@@ -150,6 +154,7 @@
         GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
         [self presentModalViewController:gameover animated:YES ];
     }
+
 
 
 }
