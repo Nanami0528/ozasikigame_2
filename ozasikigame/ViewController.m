@@ -18,6 +18,9 @@
     int guCount;
     
     int tapCount;
+    
+    bool isTapped;
+    
 }
 
 
@@ -68,6 +71,19 @@
     
     NSLog(@"time:%d", timeCount-1);
 
+    //------------------
+    //１回もTapしてなかった場合アウト
+    if (3 <= timeCount && timeCount%2 == 0) {
+        if (isTapped == NO) {
+            [self presentGameoverVC];
+        }
+    }
+    //4以上の偶数の場合、Tapを消す
+    if (timeCount%2 == 0) {
+        isTapped = NO;
+    }
+    //------------------
+    
     if (timeCount%4 == 0) {
         par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
@@ -144,16 +160,16 @@
     
     
     
-    //グーボタンを４秒の時初期化
-    if (timeCount == 4) {
-        guCount = 0;
-    }
+//    //グーボタンを４秒の時初期化
+//    if (timeCount == 4) {
+//        guCount = 0;
+//    }
     //時間が６秒になった時　グーボタンが1回押されてないといけない
-    if (timeCount  == 6 && guCount == 0 < guCount >2) {
-       
-        GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-        [self presentModalViewController:gameover animated:YES ];
-    }
+//    if (timeCount  == 6 && guCount == 0 < guCount >2) {
+//       
+//        GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
+//        [self presentModalViewController:gameover animated:YES ];
+//    }
 
 
 
@@ -164,7 +180,7 @@
     
     startButton.hidden=YES;
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
@@ -200,11 +216,13 @@
 }
 
 
+
+
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
     tapCount++;
     NSLog(@"タップされました．");
   
-       
+    isTapped=YES;
  
  
     //
@@ -219,8 +237,7 @@
         //間違って２連続タップでアウト
         NSLog(@"%d",doubleTap);
         if (doubleTap == 2) {
-            GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-            [self presentModalViewController:gameover animated:YES ];
+            [self presentGameoverVC];
         }
    
 
@@ -239,8 +256,7 @@
      }else{
         
         
-        GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-        [self presentModalViewController:gameover animated:YES ];
+         [self presentGameoverVC];
         
         
     }
@@ -293,7 +309,10 @@
 
 
 
-
+- (void)presentGameoverVC {
+    GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
+    [self presentModalViewController:gameover animated:YES ];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
