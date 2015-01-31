@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 nanami. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "GameoverViewController.h"
 #import "GameclearViewController.h"
 
-@interface ViewController (){
+@interface MainViewController (){
     NSTimer *timer;
     
     int timeCount;//メインタイマー
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

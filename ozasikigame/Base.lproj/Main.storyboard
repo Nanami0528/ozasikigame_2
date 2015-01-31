@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="xYQ-M8-Wne">
             <objects>
-                <viewController id="Wd1-5g-KNM" sceneMemberID="viewController">
+                <viewController id="Wd1-5g-KNM" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xUA-NX-2hd"/>
                         <viewControllerLayoutGuide type="bottom" id="2x7-wa-T12"/>
@@ -23,19 +23,43 @@
                                 <rect key="frame" x="-13" y="-12" width="346" height="649"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-XF-fM2">
-                                <rect key="frame" x="16" y="241" width="153" height="50"/>
+                                <rect key="frame" x="16" y="204" width="153" height="50"/>
                                 <color key="backgroundColor" red="0.70683195153061229" green="0.009998661303124743" blue="0.029888471644245834" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.058992346938775531" green="0.00083449042624624274" blue="0.0024944982819310804" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="start">
+                                <state key="normal" title="Level1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="Ee0-LE-tL9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdw-Av-833">
+                                <rect key="frame" x="16" y="271" width="153" height="50"/>
+                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-1j-xyx">
+                                <rect key="frame" x="16" y="343" width="153" height="50"/>
+                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="舞妓.png" translatesAutoresizingMaskIntoConstraints="NO" id="vJo-bk-Txx">
                                 <rect key="frame" x="135" y="329" width="246" height="219"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-d9-3ef">
+                                <rect key="frame" x="16" y="409" width="153" height="50"/>
+                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -45,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="-426" y="214"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
