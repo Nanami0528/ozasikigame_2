@@ -32,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%f",self.level);
+    //TODO: Levelの値渡し
     
     //タップViewの生成
     UIView *tapView = [[UIView alloc]init];
@@ -160,18 +162,6 @@
     
     
     
-//    //グーボタンを４秒の時初期化
-//    if (timeCount == 4) {
-//        guCount = 0;
-//    }
-    //時間が６秒になった時　グーボタンが1回押されてないといけない
-//    if (timeCount  == 6 && guCount == 0 < guCount >2) {
-//       
-//        GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-//        [self presentModalViewController:gameover animated:YES ];
-//    }
-
-
 
 }
 
@@ -180,7 +170,7 @@
     
     startButton.hidden=YES;
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.5
+    timer = [NSTimer scheduledTimerWithTimeInterval:self.level
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
@@ -265,7 +255,7 @@
  
       //10回でクリア
       if (number== 10) {
-
+　　　　　　 [timer invalidate];//初期化
           GameclearViewController*gameclear= [self.storyboard instantiateViewControllerWithIdentifier:@"gameclear"];
           [self presentModalViewController:gameclear animated:YES ];
     
@@ -279,27 +269,6 @@
 
 
 
-//長押し関連処理
-//-(void)longPressedHandler:(UILongPressGestureRecognizer *)gestureRecognizer
-//{
-//    NSLog(@"%s",__func__);
-//    switch (gestureRecognizer.state) {
-//        case UIGestureRecognizerStateBegan://長押しを検知開始
-//        {
-//            NSLog(@"UIGestureRecognizerStateBegan");
-//            guCount = 1;
-//        }
-//        break;
-//        case UIGestureRecognizerStateEnded://長押し終了時
-//        {
-//            NSLog(@"UIGestureRecognizerStateEnded");
-//            guCount = 0;
-//        }
-//        break;
-//        default:
-//            break;
-//    }
-//}
 
 
 
@@ -307,9 +276,9 @@
 
 
 
-
-
+//ゲームオーバー
 - (void)presentGameoverVC {
+    [timer invalidate];//初期化
     GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
     [self presentModalViewController:gameover animated:YES ];
 }

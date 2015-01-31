@@ -26,9 +26,10 @@
 
     
     int number;
+    
 }
 
-
+@property float level;
 
 -(IBAction)start;
 -(IBAction)tap;

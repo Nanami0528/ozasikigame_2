@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "MainViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -17,7 +17,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    
 }
+
+-(IBAction)lavel1{
+    
+    MainViewController *mainVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    mainVC.level = 1;
+    
+    //mainVC.secondNum = self.firstNum;
+    [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+    
+};
+-(IBAction)lavel2{
+    
+    MainViewController *mainVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    mainVC.level = 0.7;
+    
+    //mainVC.secondNum = self.firstNum;
+    [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+    
+};
+-(IBAction)lavel3{
+    
+    MainViewController *mainVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    mainVC.level = 0.65;
+    
+    //mainVC.secondNum = self.firstNum;
+    [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+    
+};
+-(IBAction)lavel4{
+    
+    MainViewController *mainVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    mainVC.level = 0.55;
+    
+    //mainVC.secondNum = self.firstNum;
+    [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+    
+};
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

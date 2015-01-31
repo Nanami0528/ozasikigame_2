@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+{
+    
+    
+    
+}
+
+
+-(IBAction)lavel1;
+-(IBAction)lavel2;
+-(IBAction)lavel3;
+-(IBAction)lavel4;
 
 @end
