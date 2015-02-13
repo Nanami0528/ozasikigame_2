@@ -14,11 +14,11 @@
     NSTimer *timer;
     int timeCount;
     int doubleTap;
-    BOOL guCount;
     
     int tapCount;
     
     BOOL isTapped;
+    BOOL isMultiTapped;
 }
 @end
 
@@ -28,16 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //タップViewの生成
-    //FIX: これなにしてる？
     UIView *tapView = [[UIView alloc]init];
     tapView.frame = CGRectMake(0, 0, 108, 97);
     tapView.backgroundColor = [UIColor clearColor];
     [tapButton addSubview:tapView];
-    
     //タップ認識
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view_Tapped:)];
-    
     // ビューにジェスチャーを追加（タップしたか確認のビュー）
     [tapView addGestureRecognizer:tapGesture];
     
@@ -53,12 +50,9 @@
     doubleTap = 0;
     number=0;
     
-    //タップされていないので
+    //最初に設定しておく、タップされていないのでNOにする
     isTapped = NO;
-    // ピンチ
-    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc]
-                                              initWithTarget:self action:@selector(handlePinchGesture:)];
-    [self.view addGestureRecognizer:pinchGesture];
+    isMultiTapped = NO;
 }
 
 
@@ -66,11 +60,11 @@
     timeCount += 1;
     countLabel.text = [NSString stringWithFormat:@"%d",timeCount-1];
     NSLog(@"time:%d", timeCount-1);
-    //-------------------------
+    //-----タッチされてなかったの実装---
     if (3 <= timeCount && timeCount%2 == 0) {
         if (isTapped == NO) {
             NSLog(@"no tap");
-            //            NSAssert(isTappedOdd==YES, @"no tap");
+            //NSAssert(isTappedOdd==YES, @"no tap");
             [self presentGameoverVC];
         }
     }
@@ -78,11 +72,10 @@
     if (timeCount%2 == 0) {
         isTapped = NO;
     }
-    
+    //------------------------------
     if (timeCount%4 == 0) {
         par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
-        
         NSLog(@"gu"); //手ぐーが出てきた時
         
         
@@ -138,7 +131,7 @@
         
         //ADD:
         if (4 < timeCount) {//FIX: 辛い
-            if (guCount == YES) {
+            if (isMultiTapped == YES) {
                 NSLog(@"****ok");
             } else {
                 GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
@@ -148,6 +141,7 @@
         
     }
     //２秒ごとにダブルタップを初期化
+    //FIX: ２秒毎に初期化するならBool型でいいのでは？
     if (timeCount%2 == 0) {
         doubleTap = 0;
     }
@@ -155,9 +149,7 @@
 
 
 -(IBAction)start{
-    
     startButton.hidden=YES;
-    
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(time:)
@@ -166,15 +158,15 @@
 }
 
 //xibでmultipletouches
-//TODO: 同時押し
--(IBAction)gubuttont:(UIButton*)sendButton andEvent:(UIEvent*) event {
+//TODO: 同時押しを実装
+-(IBAction)tapButton:(UIButton*)sendButton andEvent:(UIEvent*) event {
     NSSet *touches = [event touchesForView:sendButton];
     int fingerCount = (int)[touches count];
     NSLog(@"%d",fingerCount);
     if (fingerCount == 2) {
-        guCount = YES;
+        isMultiTapped = YES;
     } else {
-        guCount = NO;
+        isMultiTapped = NO;
     }
 }
 

@@ -32,8 +32,7 @@
 @property float level;
 
 -(IBAction)start;
--(IBAction)tap;
--(IBAction)gubutton;
+-(IBAction)gubutton:(UIButton*)sendButton andEvent:(UIEvent*) event;
 
 @end
 
