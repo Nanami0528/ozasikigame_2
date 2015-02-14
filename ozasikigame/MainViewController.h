@@ -10,6 +10,7 @@
 
 @interface MainViewController : UIViewController
 {
+    IBOutlet UIView *tapView;
     
     IBOutlet UIImageView *par;
     IBOutlet UIImageView *gu;

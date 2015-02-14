@@ -93,13 +93,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand001.png" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
                                 <rect key="frame" x="110" y="81" width="102" height="183"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-ZC-OFS" userLabel="tapButton">
-                                <rect key="frame" x="104" y="153" width="108" height="97"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4w-30-rDP" userLabel="tapView">
+                                <rect key="frame" x="87" y="142" width="146" height="126"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-ZC-OFS" userLabel="tapButton">
+                                <rect key="frame" x="84" y="113" width="154" height="151"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapButton:andEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SOv-0s-KPf"/>
+                                    <action selector="tapButton:andEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Mo-u8-Vgh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSi-nI-Tg3">
@@ -163,6 +167,7 @@
                         <outlet property="startButton" destination="mSi-nI-Tg3" id="NTX-xT-WmE"/>
                         <outlet property="tapButton" destination="Rcb-ZC-OFS" id="7vr-7p-jWq"/>
                         <outlet property="tapLabel" destination="sb0-Is-vBi" id="M4T-HN-Iel"/>
+                        <outlet property="tapView" destination="I4w-30-rDP" id="DgT-2D-OmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
