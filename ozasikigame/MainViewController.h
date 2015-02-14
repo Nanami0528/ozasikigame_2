@@ -10,10 +10,13 @@
 
 @interface MainViewController : UIViewController
 {
-    
+    //相手の手
     IBOutlet UIImageView *par;
     IBOutlet UIImageView *gu;
     IBOutlet UIImageView *red;
+    
+    //自分の手
+    IBOutlet UIImageView*mypar;
     
     //ボタン
     IBOutlet UIButton *startButton;

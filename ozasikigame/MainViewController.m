@@ -62,11 +62,13 @@
     red.hidden = NO;
     doubleTap = 0;
     number=0;
+    mypar.hidden=YES;
     
 }
 
 
 -(void)time:(NSTimer*)timer{
+    mypar.hidden=YES;
     timeCount += 1;
     countLabel.text = [NSString stringWithFormat:@"%d",timeCount-1];
 
@@ -211,9 +213,10 @@
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
     tapCount++;
     NSLog(@"タップされました．");
-  
+     mypar.hidden=NO;
+     
     isTapped=YES;
- 
+    
  
     //
     if (timeCount%2 == 1) {

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OZASIKI.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-PU-2Zv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="お座敷ほーむ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-PU-2Zv">
                                 <rect key="frame" x="-5" y="-5" width="334" height="573"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-XF-fM2">
@@ -88,7 +88,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="おわん００.png" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-d2-mVO">
-                                <rect key="frame" x="84" y="136" width="154" height="138"/>
+                                <rect key="frame" x="102" y="143" width="117" height="105"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand001.png" translatesAutoresizingMaskIntoConstraints="NO" id="94k-3f-7GE">
                                 <rect key="frame" x="110" y="81" width="102" height="183"/>
@@ -125,7 +125,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand000.png" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Te-MAT">
-                                <rect key="frame" x="54" y="-25" width="215" height="193"/>
+                                <rect key="frame" x="40" y="40" width="215" height="193"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szb-oN-aIZ">
                                 <rect key="frame" x="232" y="92" width="34" height="21"/>
@@ -150,6 +150,12 @@
                                     <action selector="gubutton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FUD-V9-VtM"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjl-fV-dGd">
+                                <rect key="frame" x="105" y="195" width="107" height="69"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1mypar.png" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-ly-xGM">
+                                <rect key="frame" x="71" y="104" width="169" height="265"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -158,6 +164,7 @@
                         <outlet property="countLabel" destination="HoQ-A2-afa" id="vYg-Hy-uxm"/>
                         <outlet property="gu" destination="z8K-Te-MAT" id="0qj-A0-c6p"/>
                         <outlet property="guButton" destination="a7v-hi-ObV" id="zxQ-Ub-4r4"/>
+                        <outlet property="mypar" destination="yvw-ly-xGM" id="11c-hf-TZ1"/>
                         <outlet property="par" destination="94k-3f-7GE" id="3Jg-KY-Ubv"/>
                         <outlet property="red" destination="gAQ-d2-mVO" id="8gK-yw-ZJ7"/>
                         <outlet property="startButton" destination="mSi-nI-Tg3" id="NTX-xT-WmE"/>
@@ -241,13 +248,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1mypar.png" width="320" height="568"/>
         <image name="OZASIKI-GAME.jpg" width="320" height="568"/>
         <image name="OZASIKI-GAMEOVER.jpg" width="320" height="568"/>
-        <image name="OZASIKI.jpg" width="320" height="568"/>
+        <image name="hand" width="320" height="568"/>
         <image name="hand000.png" width="269" height="188"/>
         <image name="hand001.png" width="237" height="332"/>
         <image name="tatami.png" width="320" height="568"/>
         <image name="おわん００.png" width="586" height="473"/>
+        <image name="お座敷ほーむ.jpg" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wr0-8q-UCh"/>

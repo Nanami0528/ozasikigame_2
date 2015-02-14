@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92EEB1F1A8E36AA00CC18C9 /* お座敷ほーむ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E92EEB1E1A8E36AA00CC18C9 /* お座敷ほーむ.jpg */; };
+		E92EEB271A8F148000CC18C9 /* 1mypar.png in Resources */ = {isa = PBXBuildFile; fileRef = E92EEB261A8F148000CC18C9 /* 1mypar.png */; };
 		E988CF0F1A7C9F3400EC6FDA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E988CF0E1A7C9F3400EC6FDA /* HomeViewController.m */; };
 		E98DFC7E1A7CD08700EA2D88 /* 舞妓.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E98DFC7D1A7CD08700EA2D88 /* 舞妓.jpg */; };
 		E98DFC801A7D1C6400EA2D88 /* OZASIKI.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E98DFC7F1A7D1C6400EA2D88 /* OZASIKI.jpg */; };
@@ -28,7 +30,6 @@
 		E9FC4A071A4BDB3000599825 /* おわん００.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A061A4BDB3000599825 /* おわん００.png */; };
 		E9FC4A171A4BF9F200599825 /* hand000.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A161A4BF9F200599825 /* hand000.png */; };
 		E9FC4A191A4BF9FA00599825 /* hand001.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4A181A4BF9FA00599825 /* hand001.png */; };
-		E9FC4B4B1A4BFF7700599825 /* hand005.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B4A1A4BFF7700599825 /* hand005.png */; };
 		E9FC4B4F1A4C037600599825 /* 舞妓.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B4E1A4C037600599825 /* 舞妓.png */; };
 		E9FC4B511A4C04BC00599825 /* watool_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B501A4C04BC00599825 /* watool_06.jpg */; };
 		E9FC4B531A4C052A00599825 /* お座敷文字.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FC4B521A4C052A00599825 /* お座敷文字.png */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E92EEB1E1A8E36AA00CC18C9 /* お座敷ほーむ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "お座敷ほーむ.jpg"; sourceTree = "<group>"; };
+		E92EEB261A8F148000CC18C9 /* 1mypar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1mypar.png; sourceTree = "<group>"; };
 		E988CF0D1A7C9F3400EC6FDA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E988CF0E1A7C9F3400EC6FDA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E98DFC7D1A7CD08700EA2D88 /* 舞妓.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "舞妓.jpg"; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		E9FC4A061A4BDB3000599825 /* おわん００.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "おわん００.png"; sourceTree = "<group>"; };
 		E9FC4A161A4BF9F200599825 /* hand000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand000.png; sourceTree = "<group>"; };
 		E9FC4A181A4BF9FA00599825 /* hand001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand001.png; sourceTree = "<group>"; };
-		E9FC4B4A1A4BFF7700599825 /* hand005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand005.png; sourceTree = "<group>"; };
 		E9FC4B4E1A4C037600599825 /* 舞妓.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "舞妓.png"; sourceTree = "<group>"; };
 		E9FC4B501A4C04BC00599825 /* watool_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watool_06.jpg; sourceTree = "<group>"; };
 		E9FC4B521A4C052A00599825 /* お座敷文字.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "お座敷文字.png"; sourceTree = "<group>"; };
@@ -104,6 +106,8 @@
 		E9C1AAD01A298E8100B8B0FF = {
 			isa = PBXGroup;
 			children = (
+				E92EEB261A8F148000CC18C9 /* 1mypar.png */,
+				E92EEB1E1A8E36AA00CC18C9 /* お座敷ほーむ.jpg */,
 				E98DFC831A7D1E5F00EA2D88 /* OZASIKI-GAME.jpg */,
 				E98DFC811A7D1E0A00EA2D88 /* OZASIKI-GAMEOVER.jpg */,
 				E98DFC7D1A7CD08700EA2D88 /* 舞妓.jpg */,
@@ -112,7 +116,6 @@
 				E9FC4B521A4C052A00599825 /* お座敷文字.png */,
 				E9FC4B501A4C04BC00599825 /* watool_06.jpg */,
 				E9FC4B4E1A4C037600599825 /* 舞妓.png */,
-				E9FC4B4A1A4BFF7700599825 /* hand005.png */,
 				E9FC4A181A4BF9FA00599825 /* hand001.png */,
 				E9FC4A161A4BF9F200599825 /* hand000.png */,
 				E9FC4A061A4BDB3000599825 /* おわん００.png */,
@@ -262,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92EEB1F1A8E36AA00CC18C9 /* お座敷ほーむ.jpg in Resources */,
 				E9FC4B531A4C052A00599825 /* お座敷文字.png in Resources */,
 				E9FC4A071A4BDB3000599825 /* おわん００.png in Resources */,
 				E9C1AB391A29D2A000B8B0FF /* 赤.png in Resources */,
@@ -270,13 +274,13 @@
 				E9C1AB371A29B89800B8B0FF /* Hand.jpg in Resources */,
 				E98DFC821A7D1E0A00EA2D88 /* OZASIKI-GAMEOVER.jpg in Resources */,
 				E98DFC7E1A7CD08700EA2D88 /* 舞妓.jpg in Resources */,
+				E92EEB271A8F148000CC18C9 /* 1mypar.png in Resources */,
 				E98DFC801A7D1C6400EA2D88 /* OZASIKI.jpg in Resources */,
 				E9FC4B551A4C05F000599825 /* さくら.png in Resources */,
 				E9FC4A051A4BDB2200599825 /* tatami.png in Resources */,
 				E9FC4B4F1A4C037600599825 /* 舞妓.png in Resources */,
 				E98EF83C1A6A209F009C1482 /* hand004.png in Resources */,
 				E9C1AAED1A298E8100B8B0FF /* LaunchScreen.xib in Resources */,
-				E9FC4B4B1A4BFF7700599825 /* hand005.png in Resources */,
 				E9FC4A171A4BF9F200599825 /* hand000.png in Resources */,
 				E9FC4B511A4C04BC00599825 /* watool_06.jpg in Resources */,
 				E9C1AAEA1A298E8100B8B0FF /* Images.xcassets in Resources */,
