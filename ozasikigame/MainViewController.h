@@ -27,6 +27,7 @@
     IBOutlet UILabel * countLabel;
     IBOutlet UILabel * tapLabel;
 
+    IBOutlet UIView *tapView;
     
     int number;
     
@@ -35,8 +36,6 @@
 @property float level;
 
 -(IBAction)start;
--(IBAction)tap;
--(IBAction)gubutton;
 
 @end
 
