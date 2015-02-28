@@ -48,10 +48,12 @@
     isMultiTapped = NO;
     tapButton.backgroundColor = [UIColor clearColor];
     tapButton.hidden = YES;
+    mypar.hidden = YES;
 }
 
-
 -(void)time:(NSTimer*)timer{
+    mypar.hidden=YES;
+    //TODO: mygu.hidden = YES;
     timeCount += 1;
     countLabel.text = [NSString stringWithFormat:@"%d",timeCount-1];
     NSLog(@"time:%d", timeCount-1);
@@ -126,6 +128,7 @@
     }
     //-------------------------
     //tapButtonの処理
+    //TODO: ここを5の倍数の時ではなく、
     if (timeCount %4 == 1) {
         tapButton.hidden = NO;
         if (isMultiTapped == YES) {
@@ -143,12 +146,17 @@
     if (timeCount%2 == 0) {
         doubleTap = 0;
     }
+    //-------------------------
+    if (3 < timeCount && timeCount%2 == 1 && number + 1 != timeCount/2) {
+        NSLog(@"一定の点数を取ってないのでアウト,number:%d,time:%d",number,timeCount);
+        [self presentGameoverVC];
+    }
 }
 
 
 -(IBAction)start{
     startButton.hidden=YES;
-    timer = [NSTimer scheduledTimerWithTimeInterval:1
+    timer = [NSTimer scheduledTimerWithTimeInterval:self.level
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
@@ -161,10 +169,10 @@
     [self presentGameclearVC];
     NSSet *touches = [event touchesForView:sendButton];
     int fingerCount = (int)[touches count];
-    NSLog(@":%d",fingerCount);
     if (timeCount % 4 == 1) {
         if (fingerCount == 2) {
             NSLog(@"OK!!!");
+            mypar.hidden = NO;//TODO: guの画像を用意しよう
             number++;
             tapLabel.text =[NSString  stringWithFormat:@"%d",number];
             isMultiTapped = YES;
@@ -184,8 +192,8 @@
 
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
     tapCount++;
-    NSLog(@"タップされました．");
     isTapped = YES;
+    mypar.hidden = NO;
     if (timeCount%2 == 1) {
         doubleTap += 1;
         NSLog(@"%d",doubleTap);
@@ -218,4 +226,5 @@
     GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
     [self presentViewController:gameover animated:YES completion:nil];
 }
+
 @end

@@ -21,7 +21,6 @@
     //ボタン
     IBOutlet UIButton *startButton;
     IBOutlet UIButton *tapButton;
-    IBOutlet UIButton *guButton;
     
     //ラベル
     IBOutlet UILabel * countLabel;
