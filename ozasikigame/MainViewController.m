@@ -12,48 +12,28 @@
 
 @interface MainViewController (){
     NSTimer *timer;
-    
     int timeCount;//メインタイマー
     int doubleTap;//ダブルタップ
     int guCount;
     
     int tapCount;
     
-    bool isTapped;
-    
+    BOOL isTapped;
+    BOOL isMultiTapped;
 }
-
-
-
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"%f",self.level);
-    //TODO: Levelの値渡し
-    
     //タップViewの生成
-    UIView *tapView = [[UIView alloc]init];
-    tapView.frame = CGRectMake(0, 0, 108, 97);
     tapView.backgroundColor = [UIColor clearColor];
-    [tapButton addSubview:tapView];
-    
-    
     //タップ認識
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view_Tapped:)];
-    
     // ビューにジェスチャーを追加（タップしたか確認のビュー）
     [tapView addGestureRecognizer:tapGesture];
-    
-    
-    //ボタンの長押し設定部分
-    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressedHandler:)];
-    [guButton addGestureRecognizer:gestureRecognizer];
-    
     
     //初期値を設定
     timeCount = 1; //最初に手が出てくるようにするために１
@@ -62,23 +42,26 @@
     red.hidden = NO;
     doubleTap = 0;
     number=0;
-    mypar.hidden=YES;
     
+    //最初に設定しておく、タップされていないのでNOにする
+    isTapped = NO;
+    isMultiTapped = NO;
+    tapButton.backgroundColor = [UIColor clearColor];
+    tapButton.hidden = YES;
+    mypar.hidden = YES;
 }
-
 
 -(void)time:(NSTimer*)timer{
     mypar.hidden=YES;
+    //TODO: mygu.hidden = YES;
     timeCount += 1;
     countLabel.text = [NSString stringWithFormat:@"%d",timeCount-1];
-    
-    
     NSLog(@"time:%d", timeCount-1);
-    
-    //------------------
-    //１回もTapしてなかった場合アウト
+    //-----タッチされてなかったの実装---
     if (3 <= timeCount && timeCount%2 == 0) {
         if (isTapped == NO) {
+            NSLog(@"たっちされなかったのでアウト");
+            //NSAssert(isTappedOdd==YES, @"no tap");
             [self presentGameoverVC];
         }
     }
@@ -86,12 +69,10 @@
     if (timeCount%2 == 0) {
         isTapped = NO;
     }
-    //------------------
-    
+    //------------------------------
     if (timeCount%4 == 0) {
         par.hidden = YES; // 非表示になる。
         gu.hidden = NO;
-        
         NSLog(@"gu"); //手ぐーが出てきた時
         
         
@@ -112,7 +93,7 @@
         
     }else if(timeCount%4==1){
         
-        //        red.hidden =YES;
+//        red.hidden =YES;
         gu.hidden = YES;
         NSLog(@"par");//手パーが出てきたとき
         
@@ -122,14 +103,11 @@
         
         
         
-        
-        
-        
         [UIView animateWithDuration:0.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              par.center = CGPointMake(160, 400);
-                             //                             par.frame = CGRectMake(80, 300, 102, 183);
-                             
+//                             par.frame = CGRectMake(80, 300, 102, 183);
+
                          }completion:^(BOOL finished) {
                              [UIView animateWithDuration:0.4f delay:0.2 options:UIViewAnimationOptionCurveEaseInOut
                                               animations:^{
@@ -141,84 +119,81 @@
         
         
         
-        
         gu.hidden = YES;
         red.hidden = NO;
-        
     }else{
         par.hidden=YES;
-        
-        
         gu.hidden=YES;
-        
-        
         red.hidden = NO;
-        
-        
-        
     }
+    //-------------------------
+    //tapButtonの処理
+    //TODO: ここを5の倍数の時ではなく、
+    if (timeCount %4 == 1) {
+        tapButton.hidden = NO;
+        if (isMultiTapped == YES) {
+            NSLog(@"５の倍数秒の時以外に押したらアウト");
+            [self presentGameoverVC];
+        }
+    } else {
+        tapButton.hidden = YES;
+        //FIX: 要確認
+        isTapped = YES;
+    }
+    //-------------------------
     //２秒ごとにダブルタップを初期化
+    //FIX: ２秒毎に初期化するならBool型でいいのでは？
     if (timeCount%2 == 0) {
         doubleTap = 0;
     }
-    
-    
-    
-    
+    //-------------------------
+    if (3 < timeCount && timeCount%2 == 1 && number + 1 != timeCount/2) {
+        NSLog(@"一定の点数を取ってないのでアウト,number:%d,time:%d",number,timeCount);
+        [self presentGameoverVC];
+    }
 }
 
 
 -(IBAction)start{
-    
     startButton.hidden=YES;
-    
     timer = [NSTimer scheduledTimerWithTimeInterval:self.level
                                              target:self
                                            selector:@selector(time:)
                                            userInfo:nil
                                             repeats:YES];
-    
-    
 }
 
-
--(IBAction)gubutton{
-    
-    
-    guCount += 1;
-    //    NSLog( @"グー押した%d", guCount)
-    //
-    
-    //    if (timeCount == 5+4*guCount ) {
-    //
-    //
-    //
-    //          NSLog( @"グー押した%d", guCount);
-    ////                       NSLog(@"****ok");
-    //
-    //
-    //    }else {
-    ////                   GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-    ////                    [self presentModalViewController:gameover animated:YES ];
-    ////
-    //
-    //
-    //    }
-    
+//xibでmultipletouchesのチェック入れるのを注意する
+//同時押しを実装
+-(IBAction)tapButton:(UIButton*)sendButton andEvent:(UIEvent*) event {
+    [self presentGameclearVC];
+    NSSet *touches = [event touchesForView:sendButton];
+    int fingerCount = (int)[touches count];
+    if (timeCount % 4 == 1) {
+        if (fingerCount == 2) {
+            NSLog(@"OK!!!");
+            mypar.hidden = NO;//TODO: guの画像を用意しよう
+            number++;
+            tapLabel.text =[NSString  stringWithFormat:@"%d",number];
+            isMultiTapped = YES;
+        } else {
+            [self presentGameoverVC];
+            NSLog(@"2タップじゃないと駄目！");
+        }
+        isMultiTapped = NO;
+        
+    } else {
+        isMultiTapped = NO;
+        //それ以外でTwoタップ
+    }
 }
-
 
 
 
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
     tapCount++;
-    NSLog(@"タップされました．");
-    mypar.hidden=NO;
-    
-    isTapped=YES;
-    
-    
-    //
+    isTapped = YES;
+    mypar.hidden = NO;
     if (timeCount%2 == 1) {
         doubleTap += 1;
         NSLog(@"%d",doubleTap);
@@ -227,68 +202,29 @@
         tapLabel.text =[NSString  stringWithFormat:@"%d",number];
         
         
-        //間違って２連続タップでアウト
         NSLog(@"%d",doubleTap);
         if (doubleTap == 2) {
+            NSLog(@"間違って２連続タップでアウト");
             [self presentGameoverVC];
         }
-        
-        
-        
-        //        if (timeCount%4 == 0) {
-        
-        //            guCount += 1;
-        //            if (guCount == 1) {
-        //                NSLog(@"****ok");
-        //            } else {
-        //                GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-        //                [self presentModalViewController:gameover animated:YES ];
-        //            }
-        //        }
-        //
-    }else{
-        
-        
+    } else {
+        NSLog(@"奇数の時以外に、タップしてもアウト");
         [self presentGameoverVC];
-        
-        
     }
-    
-    
-    
+    [self presentGameclearVC];
+}
+- (void)presentGameclearVC{
     //10回でクリア
-    if (number== 10) {
-        　　　　　　 [timer invalidate];//初期化
+    if (number >= 10) {
+        [timer invalidate];
         GameclearViewController*gameclear= [self.storyboard instantiateViewControllerWithIdentifier:@"gameclear"];
-        [self presentModalViewController:gameclear animated:YES ];
-        
+        [self presentViewController:gameclear animated:YES completion:nil];
     }
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-//ゲームオーバー
-- (void)presentGameoverVC {
-    [timer invalidate];//初期化
+- (void)presentGameoverVC{
+    [timer invalidate];
     GameoverViewController *gameover= [self.storyboard instantiateViewControllerWithIdentifier:@"gameover"];
-    [self presentModalViewController:gameover animated:YES ];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self presentViewController:gameover animated:YES completion:nil];
 }
 
 @end
