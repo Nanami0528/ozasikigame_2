@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"level:%f",self.level);
     //タップViewの生成
     tapView.backgroundColor = [UIColor clearColor];
     //タップ認識
