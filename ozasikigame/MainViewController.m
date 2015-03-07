@@ -10,17 +10,7 @@
 #import "GameoverViewController.h"
 #import "GameclearViewController.h"
 
-@interface MainViewController (){
-    NSTimer *timer;
-    int timeCount;//メインタイマー
-    int doubleTap;//ダブルタップ
-    int guCount;
-    
-    int tapCount;
-    
-    BOOL isTapped;
-    BOOL isMultiTapped;
-}
+@interface MainViewController ()
 @end
 
 @implementation MainViewController
@@ -218,7 +208,7 @@
     //10回でクリア
     if (number >= 10) {
         [timer invalidate];
-        GameclearViewController*gameclear= [self.storyboard instantiateViewControllerWithIdentifier:@"gameclear"];
+        GameclearViewController *gameclear= [self.storyboard instantiateViewControllerWithIdentifier:@"gameclear"];
         [self presentViewController:gameclear animated:YES completion:nil];
     }
 }

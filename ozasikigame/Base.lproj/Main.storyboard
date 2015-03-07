@@ -16,34 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="お座敷ほーむ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-PU-2Zv">
-                                <rect key="frame" x="-5" y="-5" width="334" height="573"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="お座敷ほーむ3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-PU-2Zv">
+                                <rect key="frame" x="-7" y="-5" width="334" height="573"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-XF-fM2">
-                                <rect key="frame" x="16" y="232" width="120" height="35"/>
-                                <color key="backgroundColor" red="0.70683195153061229" green="0.009998661303124743" blue="0.029888471644245834" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.058992346938775531" green="0.00083449042624624274" blue="0.0024944982819310804" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Level1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="lavel1" destination="Wd1-5g-KNM" eventType="touchUpInside" id="5Im-jk-22T"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdw-Av-833">
-                                <rect key="frame" x="16" y="282" width="120" height="35"/>
-                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Level2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="lavel2" destination="Wd1-5g-KNM" eventType="touchUpInside" id="IRT-uL-spN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-1j-xyx">
                                 <rect key="frame" x="16" y="334" width="120" height="35"/>
-                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.62890517747378283" blue="0.5743875807613299" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Level3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,13 +32,35 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-d9-3ef">
                                 <rect key="frame" x="16" y="383" width="120" height="35"/>
-                                <color key="backgroundColor" red="0.7068319515" green="0.0099986613030000008" blue="0.029888471640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.55909230799297227" blue="0.56274056533903005" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Level4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="lavel4" destination="Wd1-5g-KNM" eventType="touchUpInside" id="5UG-aT-E85"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-XF-fM2">
+                                <rect key="frame" x="16" y="232" width="120" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.66535415335700887" blue="0.51687575290659349" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346938775531" green="0.00083449042624624274" blue="0.0024944982819310804" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lavel1" destination="Wd1-5g-KNM" eventType="touchUpInside" id="5Im-jk-22T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdw-Av-833">
+                                <rect key="frame" x="16" y="282" width="120" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.59829860513332855" blue="0.4358172917541786" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.058992346940000003" green="0.0008344904262" blue="0.0024944982820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lavel2" destination="Wd1-5g-KNM" eventType="touchUpInside" id="IRT-uL-spN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="71" y="104" width="169" height="265"/>
                             </imageView>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-ZC-OFS" userLabel="multiTapButton">
-                                <rect key="frame" x="59" y="149" width="221" height="210"/>
+                                <rect key="frame" x="0.0" y="149" width="320" height="420"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -245,7 +245,7 @@
         <image name="hand001.png" width="237" height="332"/>
         <image name="tatami.png" width="320" height="568"/>
         <image name="おわん００.png" width="586" height="473"/>
-        <image name="お座敷ほーむ.jpg" width="320" height="568"/>
+        <image name="お座敷ほーむ3.jpg" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wr0-8q-UCh"/>

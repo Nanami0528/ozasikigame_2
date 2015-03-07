@@ -30,6 +30,16 @@
     
     int number;
     
+    NSTimer *timer;
+    int timeCount;//メインタイマー
+    int doubleTap;//ダブルタップ
+    int guCount;
+    
+    int tapCount;
+    
+    BOOL isTapped;
+    BOOL isMultiTapped;
+    
 }
 
 @property float level;
