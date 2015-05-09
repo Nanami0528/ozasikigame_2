@@ -19,6 +19,8 @@
 -(IBAction)lavel1;
 -(IBAction)lavel2;
 -(IBAction)lavel3;
--(IBAction)lavel4;
+-(IBAction)random;
+
+//-(IBAction)lavel4;
 
 @end

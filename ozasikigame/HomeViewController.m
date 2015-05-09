@@ -8,6 +8,10 @@
 
 #import "HomeViewController.h"
 #import "MainViewController.h"
+#import "RandomViewController.h"
+
+
+
 @interface HomeViewController ()
 
 @end
@@ -51,15 +55,18 @@
     [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
     
 };
--(IBAction)lavel4{
+
+-(IBAction)random{
     
-    MainViewController *mainVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-    mainVC.level = 0.55;
-    
+     RandomViewController*randomVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"RandomViewController"];
+   
     //mainVC.secondNum = self.firstNum;
-    [self presentViewController:mainVC animated:YES completion:nil];//YESならModal,Noなら何もなし
+    [self presentViewController:randomVC animated:YES completion:nil];//YESならModal,Noなら何もなし
     
 };
+
+
+
 
 
 

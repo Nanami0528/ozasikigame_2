@@ -12,6 +12,7 @@
 		E937EECD1AA18CA300000A6B /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E937EECC1AA18CA300000A6B /* RandomViewController.m */; };
 		E9663CD21AAAC52500D22EF9 /* お座敷ほーむ２.png in Resources */ = {isa = PBXBuildFile; fileRef = E9663CD11AAAC52500D22EF9 /* お座敷ほーむ２.png */; };
 		E9663CD41AAAE99F00D22EF9 /* お座敷ほーむ3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9663CD31AAAE99F00D22EF9 /* お座敷ほーむ3.jpg */; };
+		E982E72D1AFE189E00F65C44 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E982E72C1AFE189E00F65C44 /* Default-568h@2x.png */; };
 		E988CF0F1A7C9F3400EC6FDA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E988CF0E1A7C9F3400EC6FDA /* HomeViewController.m */; };
 		E98DFC7E1A7CD08700EA2D88 /* 舞妓.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E98DFC7D1A7CD08700EA2D88 /* 舞妓.jpg */; };
 		E98DFC801A7D1C6400EA2D88 /* OZASIKI.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E98DFC7F1A7D1C6400EA2D88 /* OZASIKI.jpg */; };
@@ -56,6 +57,7 @@
 		E937EECC1AA18CA300000A6B /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomViewController.m; path = ../RandomViewController.m; sourceTree = "<group>"; };
 		E9663CD11AAAC52500D22EF9 /* お座敷ほーむ２.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "お座敷ほーむ２.png"; sourceTree = "<group>"; };
 		E9663CD31AAAE99F00D22EF9 /* お座敷ほーむ3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "お座敷ほーむ3.jpg"; sourceTree = "<group>"; };
+		E982E72C1AFE189E00F65C44 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E988CF0D1A7C9F3400EC6FDA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E988CF0E1A7C9F3400EC6FDA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E98DFC7D1A7CD08700EA2D88 /* 舞妓.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "舞妓.jpg"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		E9C1AAD01A298E8100B8B0FF = {
 			isa = PBXGroup;
 			children = (
+				E982E72C1AFE189E00F65C44 /* Default-568h@2x.png */,
 				E9663CD31AAAE99F00D22EF9 /* お座敷ほーむ3.jpg */,
 				E9663CD11AAAC52500D22EF9 /* お座敷ほーむ２.png */,
 				E92EEB261A8F148000CC18C9 /* 1mypar.png */,
@@ -293,6 +296,7 @@
 				E9FC4A051A4BDB2200599825 /* tatami.png in Resources */,
 				E9FC4B4F1A4C037600599825 /* 舞妓.png in Resources */,
 				E98EF83C1A6A209F009C1482 /* hand004.png in Resources */,
+				E982E72D1AFE189E00F65C44 /* Default-568h@2x.png in Resources */,
 				E9C1AAED1A298E8100B8B0FF /* LaunchScreen.xib in Resources */,
 				E9FC4A171A4BF9F200599825 /* hand000.png in Resources */,
 				E9FC4B511A4C04BC00599825 /* watool_06.jpg in Resources */,

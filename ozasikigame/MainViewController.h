@@ -20,7 +20,7 @@
     
     //ボタン
     IBOutlet UIButton *startButton;
-    IBOutlet UIButton *tapButton;
+    IBOutlet UIButton *multiTapButton;
     
     //ラベル
     IBOutlet UILabel * countLabel;

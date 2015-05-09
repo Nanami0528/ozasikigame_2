@@ -21,8 +21,10 @@
     IBOutlet UILabel  *timecount;
     
     
-    NSTimer *timer0;
-    int timeCount0;
+    NSTimer *timer;
+    int timeCount;
+    
+    
     
     
 }

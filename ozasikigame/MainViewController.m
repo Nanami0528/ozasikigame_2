@@ -37,8 +37,8 @@
     //最初に設定しておく、タップされていないのでNOにする
     isTapped = NO;
     isMultiTapped = NO;
-    tapButton.backgroundColor = [UIColor clearColor];
-    tapButton.hidden = YES;
+    multiTapButton.backgroundColor = [UIColor clearColor];
+    multiTapButton.hidden = YES;
     mypar.hidden = YES;
 }
 
@@ -121,13 +121,13 @@
     //tapButtonの処理
     //TODO: ここを5の倍数の時ではなく、
     if (timeCount %4 == 1) {
-        tapButton.hidden = NO;
+        multiTapButton.hidden = NO;
         if (isMultiTapped == YES) {
             NSLog(@"５の倍数秒の時以外に押したらアウト");
             [self presentGameoverVC];
         }
     } else {
-        tapButton.hidden = YES;
+        multiTapButton.hidden = YES;
         //FIX: 要確認
         isTapped = YES;
     }
@@ -157,6 +157,7 @@
 //xibでmultipletouchesのチェック入れるのを注意する
 //同時押しを実装
 -(IBAction)tapButton:(UIButton*)sendButton andEvent:(UIEvent*) event {
+    
     [self presentGameclearVC];
     NSSet *touches = [event touchesForView:sendButton];
     int fingerCount = (int)[touches count];
@@ -182,17 +183,17 @@
 
 
 - (void)view_Tapped:(UITapGestureRecognizer *)sender{
-    tapCount++;
+    NSLog(@"%@",sender);
+ 
     isTapped = YES;
     mypar.hidden = NO;
     if (timeCount%2 == 1) {
-        doubleTap += 1;
-        NSLog(@"%d",doubleTap);
         
         number=number+1;
         tapLabel.text =[NSString  stringWithFormat:@"%d",number];
         
         
+        doubleTap += 1;
         NSLog(@"%d",doubleTap);
         if (doubleTap == 2) {
             NSLog(@"間違って２連続タップでアウト");
