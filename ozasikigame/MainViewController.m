@@ -43,6 +43,7 @@
 }
 
 -(void)time:(NSTimer*)timer{
+
     mypar.hidden=YES;
     //TODO: mygu.hidden = YES;
     timeCount += 1;
@@ -113,6 +114,7 @@
         gu.hidden = YES;
         red.hidden = NO;
     }else{
+        
         par.hidden=YES;
         gu.hidden=YES;
         red.hidden = NO;

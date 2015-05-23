@@ -34,6 +34,7 @@
     switch (timeCount) {
      
      case 0:
+            
      gu.hidden = YES;
      par.hidden =NO;
      NSLog(@"par"); //手ぱーが出てきた時
@@ -54,7 +55,9 @@
      gu.hidden = NO;
      par.hidden =YES;
      red.hidden = YES;
-     
+            
+            
+      
      break;
      
      case 3:
@@ -209,13 +212,6 @@
     
     
 }
-
-
-
-
-
-
-
 
 
 
